@@ -28,8 +28,7 @@ end
 -- wsl clipboard provider config
 function M.set_wsl_clipboard()
   local g = vim.g
-  local get_os = require("user.utils.utils").get_os
-  if get_os() == "linux-wsl" then
+  if M.get_os() == "linux-wsl" then
     local clipboard = {}
     local copy = {}
     copy["+"] = "clip.exe"
