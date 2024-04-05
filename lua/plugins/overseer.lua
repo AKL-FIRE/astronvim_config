@@ -16,7 +16,9 @@ return {
       "OverseerTaskAction ",
       "OverseerClearCache",
     },
-    opts = {},
+    opts = {
+      templates = { "builtin", "user.restart_lsp" },
+    },
   },
   {
     "rebelot/heirline.nvim",
