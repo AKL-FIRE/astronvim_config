@@ -22,9 +22,6 @@ return {
   },
   {
     "rebelot/heirline.nvim",
-    dependencies = {
-      "stevearc/overseer.nvim",
-    },
     opts = function(_, opts)
       local Spacer = { provider = " " }
       local function rpad(child)
