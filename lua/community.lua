@@ -44,6 +44,9 @@ return {
     keys = nil,
   },
 
+  -- lsp
+  { import = "astrocommunity.lsp.actions-preview-nvim" },
+
   -- utility
   { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
