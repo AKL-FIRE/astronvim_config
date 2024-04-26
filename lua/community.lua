@@ -30,9 +30,6 @@ return {
   -- spectre
   { import = "astrocommunity.project.nvim-spectre" },
 
-  -- test
-  { import = "astrocommunity.test.neotest" },
-
   -- code-runner
   { import = "astrocommunity.code-runner.compiler-nvim" },
 
