@@ -5,7 +5,7 @@ return {
     options = {
       opt = { -- configure vim.opt options
         -- configure font
-        guifont = "FiraCode Nerd Font,Hack Nerd Font:h13",
+        guifont = "FiraCode Nerd Font,Hack Nerd Font:h16",
       },
       g = { -- configure variables
         -- configure scaling
@@ -26,7 +26,7 @@ return {
         -- 使用super键位,比如<cmd>
         -- neovide_input_use_logo = true
         -- 开启Alt和Meta按键
-        neovide_input_macos_alt_is_meta = true,
+        -- neovide_input_macos_alt_is_meta = true,
         -- 触控板死亡地带
         -- neovide_touch_deadzone = 6.0
         -- 触控板拖动超时
