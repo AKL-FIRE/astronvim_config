@@ -55,6 +55,7 @@ return {
             "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
             desc = "Find words with parameters",
           },
+          ["grr"] = { "<cmd>:Telescope lsp_references<cr>", desc = "find symbols references" },
 
           -- flash
           ["<leader>j"] = {

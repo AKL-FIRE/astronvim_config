@@ -8,6 +8,7 @@ return {
   -- lsp pack
   { import = "astrocommunity.pack.lua" },
   vim.fn.executable "go" == 1 and { import = "astrocommunity.pack.go" } or {},
+  vim.fn.executable "thriftgo" == 1 and { import = "astrocommunity.pack.thrift" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.html-css" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.tailwindcss" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.typescript" } or {},
