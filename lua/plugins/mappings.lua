@@ -56,6 +56,7 @@ return {
             desc = "Find words with parameters",
           },
           ["grr"] = { "<cmd>:Telescope lsp_references<cr>", desc = "find symbols references" },
+          ["gI"] = { "<cmd>:Telescope lsp_implementations<cr>", desc = "find symbols implementations" },
 
           -- flash
           ["<leader>j"] = {
