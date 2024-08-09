@@ -27,6 +27,7 @@ return {
 
   -- cmp
   { import = "astrocommunity.completion.cmp-cmdline" },
+  { import = "astrocommunity.completion.codeium-nvim" },
 
   -- spectre
   { import = "astrocommunity.search.nvim-spectre" },
