@@ -27,7 +27,9 @@ return {
 
   -- cmp
   { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.completion.codeium-nvim" },
+  -- { import = "astrocommunity.completion.codeium-nvim" },
+  { import = "astrocommunity.completion.copilot-cmp" },
+  { "zbirenbaum/copilot-cmp", event = "User AstroNvim" },
 
   -- spectre
   { import = "astrocommunity.search.nvim-spectre" },
