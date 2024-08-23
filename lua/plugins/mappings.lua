@@ -18,17 +18,16 @@ return {
           },
           -- tables with the `name` key will be registered with which-key if it's installed
           -- this is useful for naming menus
-          ["<leader>b"] = { name = "Buffers" },
           -- quick save
           -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
           -- overseer
-          ["<leader>x"] = { desc = " " .. "Task" },
-          ["<leader>xr"] = { "<cmd>:OverseerRun<cr>", desc = "Run task" },
-          ["<leader>xt"] = { "<cmd>:OverseerToggle<cr>", desc = "Toggle task log" },
+          ["<leader>X"] = { desc = " " .. "Task" },
+          ["<leader>Xr"] = { "<cmd>:OverseerRun<cr>", desc = "Run task" },
+          ["<leader>Xt"] = { "<cmd>:OverseerToggle<cr>", desc = "Toggle task log" },
 
           -- compiler
-          ["<leader>xx"] = { "<cmd>:CompilerOpen<cr>", desc = "Open code runner" },
+          ["<leader>Xx"] = { "<cmd>:CompilerOpen<cr>", desc = "Open code runner" },
 
           -- dap
           ["<leader>dl"] = { "<cmd>:DapLoadLaunchJSON<cr>", desc = "Load launch.json" },
