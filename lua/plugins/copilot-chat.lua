@@ -36,6 +36,11 @@ return {
                   desc = " " .. "Copilit Chat",
                 },
               },
+              x = {
+                ["<leader>a"] = {
+                  desc = " " .. "Copilit Chat",
+                },
+              },
             },
           })
         end,
