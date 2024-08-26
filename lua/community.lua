@@ -27,7 +27,6 @@ return {
 
   -- cmp
   { import = "astrocommunity.completion.cmp-cmdline" },
-  -- { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.completion.copilot-cmp" },
   { "zbirenbaum/copilot-cmp", event = "User AstroNvim" },
 
@@ -47,6 +46,7 @@ return {
 
   -- lsp
   { import = "astrocommunity.lsp.actions-preview-nvim" },
+  { import = "astrocommunity.lsp.lsplinks-nvim" },
 
   -- utility
   { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
