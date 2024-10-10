@@ -55,4 +55,16 @@ function M.set_osc52_clipboard()
   }
 end
 
+-- set_component_left set heirline component on the left side of the statusline
+function M.set_component_left(opts, component)
+  local index = 1
+  for i, v in ipairs(opts.statusline) do
+    if v.provider == "%=" then
+      index = i
+      break
+    end
+  end
+  table.insert(opts.statusline, index, component)
+end
+
 return M

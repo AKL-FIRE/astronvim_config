@@ -63,7 +63,7 @@ return {
         rpad(OverseerTasksForStatus "SUCCESS"),
         rpad(OverseerTasksForStatus "FAILURE"),
       }
-      table.insert(opts.statusline, 5, overseer)
+      require("utils").set_component_left(opts, overseer)
       return opts
     end,
   },
