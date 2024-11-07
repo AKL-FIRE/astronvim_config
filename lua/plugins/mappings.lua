@@ -44,11 +44,6 @@ return {
           ["<leader>To"] = { "<cmd>lua require('neotest').output.open()<cr>", desc = "Display output of tests" },
           ["<leader>Td"] = { "<cmd>lua require('dap-go').debug_test()<cr>", desc = "debug nearest test" },
 
-          -- Devdocs
-          ["<leader>D"] = { desc = "󰺅 " .. "Devdocs" },
-          ["<leader>Dt"] = { "<cmd>DevdocsOpenFloat<cr>", desc = "open devdocs in floating term" },
-          ["<leader>DT"] = { "<cmd>DevdocsOpen<cr>", desc = "open devdocs in buf" },
-
           -- telescope search with parameters
           ["<leader>fg"] = {
             "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
