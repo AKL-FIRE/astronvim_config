@@ -21,6 +21,7 @@ return {
   vim.fn.executable "cmake" == 1 and { import = "astrocommunity.pack.cmake" } or {},
   vim.fn.executable "rustc" == 1 and { import = "astrocommunity.pack.rust" } or {},
   vim.fn.executable "bash" == 1 and { import = "astrocommunity.pack.bash" } or {},
+  vim.fn.executable "javac" == 1 and { import = "astrocommunity.pack.java" } or {},
 
   -- editting
   { import = "astrocommunity.editing-support.nvim-devdocs" },
