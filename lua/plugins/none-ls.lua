@@ -21,11 +21,6 @@ return {
         end,
       },
 
-      -- clang-format
-      null_ls.builtins.formatting.clang_format.with {
-        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
-      },
-
       -- refactory
       null_ls.builtins.code_actions.refactoring,
     }
