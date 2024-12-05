@@ -1,8 +1,9 @@
 if require("utils").get_os() == "mac" then
+  ---@type LazySpec
   return {
     "keaising/im-select.nvim",
     event = "User AstroFile",
-    config = function() require("im_select").setup {} end,
+    opts = {},
   }
 else
   return {}

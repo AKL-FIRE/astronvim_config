@@ -1,6 +1,7 @@
 if false then
   return {}
 else
+  ---@type LazySpec
   return {
     "olimorris/codecompanion.nvim",
     event = "VeryLazy",
@@ -9,6 +10,8 @@ else
       "nvim-treesitter/nvim-treesitter",
       "nvim-telescope/telescope.nvim", -- Optional
       "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
+      { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } },
+      { "echasnovski/mini.diff", opts = {} },
       {
         "rebelot/heirline.nvim",
         opts = function(_, opts)
@@ -40,6 +43,7 @@ else
       },
       {
         "AstroNvim/astrocore",
+        ---@param opts AstroCoreOpts
         opts = function(_, opts)
           local maps = opts.mappings
           maps.n["<leader>a"] = { desc = "󰚩 " .. "AI" }
@@ -69,6 +73,9 @@ else
               model = {
                 default = "claude-3.5-sonnet",
               },
+              max_tokens = {
+                default = 8192,
+              },
             },
           })
         end,
@@ -89,17 +96,17 @@ else
       },
       display = {
         chat = {
+          render_headers = false,
           show_settings = true, -- Show LLM settings at the top of the chat buffer?
           show_token_count = true, -- Show the token count for each response?
         },
-        inline = {
-          diff = {
-            enabled = true,
-          },
+        diff = {
+          provider = "mini_diff",
         },
       },
       opts = {
         log_level = "ERROR",
+        language = "中文",
       },
     },
   }

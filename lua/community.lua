@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   vim.fn.executable "go" == 1 and { import = "astrocommunity.pack.go" } or {},
   vim.fn.executable "thriftgo" == 1 and { import = "astrocommunity.pack.thrift" } or {},
+  vim.fn.executable "protoc" == 1 and { import = "astrocommunity.pack.proto" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.html-css" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.tailwindcss" } or {},
   vim.fn.executable "npm" == 1 and { import = "astrocommunity.pack.typescript" } or {},
@@ -25,13 +26,15 @@ return {
 
   -- editting
   { import = "astrocommunity.editing-support.nvim-devdocs" },
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
 
   -- cmp
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-cmp" },
 
   -- spectre
-  { import = "astrocommunity.search.nvim-spectre" },
+  -- { import = "astrocommunity.search.nvim-spectre" },
+  { import = "astrocommunity.search.grug-far-nvim" },
 
   -- code-runner
   { import = "astrocommunity.code-runner.compiler-nvim" },
