@@ -24,6 +24,9 @@ return {
   vim.fn.executable "bash" == 1 and { import = "astrocommunity.pack.bash" } or {},
   vim.fn.executable "javac" == 1 and { import = "astrocommunity.pack.java" } or {},
 
+  -- theme
+  { import = "astrocommunity.colorscheme.catppuccin" },
+
   -- editting
   { import = "astrocommunity.editing-support.nvim-devdocs" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
@@ -50,6 +53,9 @@ return {
   -- lsp
   { import = "astrocommunity.lsp.actions-preview-nvim" },
   { import = "astrocommunity.lsp.lsplinks-nvim" },
+
+  -- test
+  { import = "astrocommunity.test.neotest" },
 
   -- utility
   { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
