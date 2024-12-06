@@ -35,8 +35,7 @@ return {
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.completion.copilot-cmp" },
 
-  -- spectre
-  -- { import = "astrocommunity.search.nvim-spectre" },
+  -- find and replace
   { import = "astrocommunity.search.grug-far-nvim" },
 
   -- code-runner
