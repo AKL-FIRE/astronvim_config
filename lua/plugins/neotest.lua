@@ -12,7 +12,7 @@ return {
     local opt = {
       adapters = {
         require "neotest-go" {
-          args = { "-count=1", "-timeout=60s" },
+          args = { '-gcflags="all=-l -N"', "-count=1", "-timeout=60s" },
         },
       },
     }
