@@ -89,8 +89,18 @@ else
         },
         inline = {
           adapter = "copilot",
+          keymaps = {
+            reject_change = {
+              modes = {
+                n = "gR",
+              },
+            },
+          },
         },
         agent = {
+          adapter = "copilot",
+        },
+        cmd = {
           adapter = "copilot",
         },
       },
@@ -99,6 +109,7 @@ else
           render_headers = false,
           show_settings = true, -- Show LLM settings at the top of the chat buffer?
           show_token_count = true, -- Show the token count for each response?
+          start_in_insert_mode = true,
         },
         diff = {
           provider = "mini_diff",
