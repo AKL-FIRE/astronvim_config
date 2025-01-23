@@ -10,7 +10,13 @@ else
       "nvim-treesitter/nvim-treesitter",
       "nvim-telescope/telescope.nvim", -- Optional
       "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
-      { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } },
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        lazy = true,
+        opts = function(_, opts)
+          opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "codecompanion" })
+        end,
+      },
       { "echasnovski/mini.diff", opts = {} },
       {
         "rebelot/heirline.nvim",
@@ -58,6 +64,15 @@ else
     },
     opts = {
       adapters = {
+        deepseek = function()
+          return require("codecompanion.adapters").extend("deepseek", {
+            schema = {
+              model = {
+                default = "deepseek-chat",
+              },
+            },
+          })
+        end,
         openai = function()
           return require("codecompanion.adapters").extend("openai", {
             schema = {
@@ -80,15 +95,15 @@ else
           })
         end,
         opts = {
-          proxy = "http://localhost:10086",
+          -- proxy = "http://localhost:10086",
         },
       },
       strategies = {
         chat = {
-          adapter = "copilot",
+          adapter = "deepseek",
         },
         inline = {
-          adapter = "copilot",
+          adapter = "deepseek",
           keymaps = {
             reject_change = {
               modes = {
@@ -98,10 +113,10 @@ else
           },
         },
         agent = {
-          adapter = "copilot",
+          adapter = "deepseek",
         },
         cmd = {
-          adapter = "copilot",
+          adapter = "deepseek",
         },
       },
       display = {
