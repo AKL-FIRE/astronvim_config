@@ -64,20 +64,21 @@ else
     },
     opts = {
       adapters = {
-        deepseek = function()
-          return require("codecompanion.adapters").extend("deepseek", {
-            schema = {
-              model = {
-                default = "deepseek-chat",
-              },
+        openrouter = function()
+          return require("codecompanion.adapters").extend("openai_compatible", {
+            env = {
+              url = "https://openrouter.ai/api",
+              api_key = "OPENROUTER_API_KEY",
+              chat_url = "/v1/chat/completions",
             },
-          })
-        end,
-        openai = function()
-          return require("codecompanion.adapters").extend("openai", {
             schema = {
               model = {
-                default = "gpt-4o-mini",
+                default = "anthropic/claude-3.7-sonnet",
+                choices = {
+                  "anthropic/claude-3.7-sonnet",
+                  "anthropic/claude-3.5-sonnet",
+                  ["deepseek/deepseek-r1"] = { opts = { can_reason = true } },
+                },
               },
             },
           })
@@ -100,10 +101,10 @@ else
       },
       strategies = {
         chat = {
-          adapter = "deepseek",
+          adapter = "openrouter",
         },
         inline = {
-          adapter = "deepseek",
+          adapter = "openrouter",
           keymaps = {
             reject_change = {
               modes = {
@@ -113,10 +114,10 @@ else
           },
         },
         agent = {
-          adapter = "deepseek",
+          adapter = "openrouter",
         },
         cmd = {
-          adapter = "deepseek",
+          adapter = "openrouter",
         },
       },
       display = {
