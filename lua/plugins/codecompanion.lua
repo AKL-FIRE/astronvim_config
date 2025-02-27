@@ -77,7 +77,7 @@ else
                 choices = {
                   "anthropic/claude-3.7-sonnet",
                   "anthropic/claude-3.5-sonnet",
-                  ["deepseek/deepseek-r1"] = { opts = { can_reason = true } },
+                  "deepseek/deepseek-r1",
                 },
               },
             },
